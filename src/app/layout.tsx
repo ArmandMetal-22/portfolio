@@ -1,23 +1,23 @@
-// app/layout.tsx
-import Link from 'next/link';
-import './globals.css'; // Ensure Tailwind is imported
+'use client';
 
-export const metadata = {
-  title: 'Armand Portfolio',
-  description: 'A simple portfolio site',
-};
+import './styles/globals.css';
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body >
-        <header className="nav-bar p-4 shadow">
-          <nav className="nav-bar flex gap-4">
-            <Link href="/" className="nav-link">Home</Link>
-            <Link href="/about" className="nav-link">About</Link>
+      <body>
+        <header className="nav-bar">
+          <nav className="flex gap-4 justify-center nav-bar">
+            <a href="#home" className="nav-link">Home</a>
+            <a href="#about" className="nav-link">About</a>
+            <a href="#education" className="nav-link">Education</a>
+            <a href="#experience" className="nav-link">Experience</a>
+            <a href="#projects" className="nav-link">Projects</a>
+            <a href="#misc" className="nav-link">Misc</a>
+            <a href="#contact" className="nav-link">Contact</a>
           </nav>
         </header>
-        <main className="p-6">{children}</main>
+        <main className="pt-24">{children}</main>
       </body>
     </html>
   );

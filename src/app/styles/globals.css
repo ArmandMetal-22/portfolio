@@ -4,6 +4,7 @@
   --background: #f6f6f6;
   --text-color: #111111;
   --nav-bar-background: #bebebe;
+  --h2-text-color: #ffcb74;
 }
 
 
@@ -13,6 +14,13 @@
     --text-color: #f6f6f6;
     --nav-bar-background: #2f2f2f;
   }
+}
+section{
+  background: var(--background);
+}
+
+h1,h2{
+  color: var(--h2-text-color);
 }
 
 body {
@@ -25,6 +33,7 @@ body {
   display: inline-block; /* or block, depending on layout */
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+  color:#ffcb74;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
 }
